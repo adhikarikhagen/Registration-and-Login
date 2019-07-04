@@ -81,11 +81,10 @@ main {
 
 .email {
      display: flex;
+     align-items: center;
 }
 
 //home html
-.info_banner {
-     display: flex;
-     align-content: center;
-     justify-content: center;
+.your_info {
+     margin-left: 500px;
 }

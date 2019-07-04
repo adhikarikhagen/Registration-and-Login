@@ -647,14 +647,7 @@ i {
 }
 
 main .banner {
-  background: #00d2ff;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background-image: -webkit-gradient(linear, left top, right top, from(#928DAB), to(#00d2ff));
-  background-image: linear-gradient(to right, #928DAB, #00d2ff);
-  background-color: black;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #fff;
   padding: 5px;
 }
 
@@ -663,16 +656,21 @@ main .container {
 }
 
 .form {
-  color: white;
+  color: black;
   padding: 20px;
   margin: 50px;
   width: 500px;
-  background-color: #5076bd;
+  background-color: #f1f0f0;
+}
+
+.form form {
+  padding-left: 20px;
 }
 
 .form form p {
-  font-size: 15px;
+  font-size: 17px;
   margin: 0px;
+  font-weight: 500;
 }
 
 .form form .name {
@@ -727,7 +725,6 @@ main .container {
   padding-left: 10px;
   cursor: pointer;
   color: black;
-  background-color: rgba(250, 149, 149, 0.315);
 }
 
 .form form .input_field {
@@ -763,4 +760,5 @@ main .container {
 #submit_btn:disabled {
   -webkit-box-shadow: 0 0 15px 1px;
           box-shadow: 0 0 15px 1px;
+  color: #ffdfdf;
 }
