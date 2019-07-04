@@ -1,0 +1,178 @@
+@import"../scss/base/reset";
+@import"../scss/base/fonts";
+* {
+     box-sizing: border-box;
+}
+
+#wrapper {
+     width: 100%;
+     overflow: hidden;
+     position: relative;
+}
+
+.container {
+     width: 100%;
+     margin: 0 auto;
+}
+
+.top-bg {
+     padding-top: 10px;
+     background-color: rgb(206, 221, 223);
+}
+
+.nav {
+     display: flex;
+     ul {
+          li {
+               display: inline-block;
+               margin-left: 15px;
+               a {
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 500;
+               }
+               a:hover {
+                    text-decoration: none;
+                    padding-bottom: 10px;
+               }
+               a:active {
+                    text-decoration: underline;
+               }
+          }
+     }
+     .logreg {
+          display: flex;
+          padding-left: 100px;
+          .register {
+               margin-left: auto;
+          }
+          button {
+               padding: 0 15px;
+               border: none;
+               color: white;
+               background-color: rgb(212, 41, 41);
+          }
+     }
+}
+
+main {
+     .banner {
+          background: #00d2ff;
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background-image: linear-gradient(to right, #928DAB, #00d2ff);
+          background-color: black;
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          padding: 5px;
+     }
+     .container {
+          margin-left: 400px;
+     }
+}
+
+.form {
+     color: white;
+     padding: 20px;
+     margin: 50px;
+     width: 500px;
+     background-color: rgb(80, 118, 189);
+     form {
+          p {
+               font-size: 15px;
+               margin: 0px;
+          }
+          .name {
+               display: flex;
+               flex-flow: row;
+               margin-bottom: 10px;
+               .firstname {
+                    margin-right: 21px;
+               }
+               // .valid {
+               //      // display: none;
+               // }
+          }
+          .email_box,
+          .phone_box,
+          .password_box,
+          .confpassword_box,
+          .checkterms {
+               margin-bottom: 5px;
+               margin-top: 5px;
+          }
+          .input_icons {
+               padding: 5px 4px;
+               margin-right: -3px;
+               margin-top: 2px;
+               color: yellow;
+               display: none;
+          }
+          // .icon_position {
+          //      position: relative;
+          //      .input_icons {
+          //           border-right: 1px solid rgb(138, 119, 119);
+          //           position: absolute;
+          //           left: 10px;
+          //           top: 30px;
+          //           padding-right: 05px;
+          //           opacity: 0.6;
+          //      }
+          //      .eye_con {
+          //           position: absolute;
+          //           color: black;
+          //      }
+          // }
+          label {
+               margin-left: -29px;
+               padding-left: 4px;
+               border-left: 2px solid rgb(241, 179, 179);
+          }
+          .eye_con {
+               color: black;
+          }
+          #eye_con1,
+          #eye_con2 {
+               display: none;
+          }
+          input {
+               border: 1px solid rgba(211, 189, 189, 0.89);
+               padding-left: 10px;
+               cursor: pointer;
+               color: black;
+               background-color: rgba(250, 149, 149, 0.315);
+          }
+          .input_field {
+               display: inline-block;
+               width: 85%;
+          }
+     }
+}
+
+.sub {
+     margin-top: 40px;
+}
+
+#submit_btn {
+     text-align: center;
+     background-color: yellow;
+     padding: 10px 15px;
+     border-bottom: 1px solid rgba(226, 214, 214, 0.185);
+     color: black;
+}
+
+#login_btn {
+     text-align: center;
+     background-color: yellow;
+     padding: 5px 10px;
+     border-bottom: 1px solid rgba(226, 214, 214, 0.185);
+     color: black;
+}
+
+#submit_btn:hover {
+     box-shadow: 0 0 15px 1px;
+}
+
+#submit_btn:disabled {
+     box-shadow: 0 0 15px 1px;
+}

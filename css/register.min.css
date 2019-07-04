@@ -444,6 +444,148 @@ textarea {
   padding: 0.2em 0;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../font/fonts/icomoon.eot?rc2tcl");
+  src: url("../../font/fonts/icomoon.eot?rc2tcl#iefix") format("embedded-opentype"), url("../../font/fonts/icomoon.ttf?rc2tcl") format("truetype"), url("../../font/fonts/icomoon.woff?rc2tcl") format("woff"), url("../../font/fonts/icomoon.svg?rc2tcl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-x-altx-alt:before {
+  content: "\e90a";
+}
+
+.icons-cancel:before {
+  content: "\e90a";
+}
+
+.icons-close:before {
+  content: "\e90a";
+}
+
+.icons-clipboard:before {
+  content: "\e900";
+}
+
+.icons-board:before {
+  content: "\e900";
+}
+
+.icons-signup:before {
+  content: "\e900";
+}
+
+.icons-register:before {
+  content: "\e900";
+}
+
+.icons-agreement:before {
+  content: "\e900";
+}
+
+.icons-cancel1:before {
+  content: "\e90e";
+}
+
+.icons-close1:before {
+  content: "\e90e";
+}
+
+.icons-cancel2:before {
+  content: "\e90f";
+}
+
+.icons-close2:before {
+  content: "\e90f";
+}
+
+.icons-flag:before {
+  content: "\e914";
+}
+
+.icons-lock:before {
+  content: "\e910";
+}
+
+.icons-envelope:before {
+  content: "\e911";
+}
+
+.icons-phone:before {
+  content: "\e912";
+}
+
+.icons-user:before {
+  content: "\e913";
+}
+
+.icons-check-circle:before {
+  content: "\e90b";
+}
+
+.icons-eye-slash:before {
+  content: "\e90c";
+}
+
+.icons-eye:before {
+  content: "\e90d";
+}
+
+.icons-google-plus:before {
+  content: "\e909";
+}
+
+.icons-linkedin:before {
+  content: "\e901";
+}
+
+.icons-twitter:before {
+  content: "\e902";
+}
+
+.icons-facebook:before {
+  content: "\e903";
+}
+
+.icons-sign-in:before {
+  content: "\e904";
+}
+
+.icons-suitcase:before {
+  content: "\e905";
+}
+
+.icons-cart:before {
+  content: "\e906";
+}
+
+.icons-heart:before {
+  content: "\e907";
+}
+
+.icons-user1:before {
+  content: "\e908";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #wrapper {
   width: 100%;
   overflow: hidden;
@@ -457,6 +599,7 @@ textarea {
 
 .top-bg {
   padding-top: 10px;
+  background-color: #cedddf;
 }
 
 .nav {
@@ -479,12 +622,10 @@ textarea {
 .nav ul li a:hover {
   text-decoration: none;
   padding-bottom: 10px;
-  color: blue;
 }
 
 .nav ul li a:active {
   text-decoration: underline;
-  color: blue;
 }
 
 .nav .logreg {
@@ -499,45 +640,127 @@ textarea {
 }
 
 .nav .logreg button {
+  padding: 0 15px;
   border: none;
   color: white;
   background-color: #d42929;
 }
 
-.nav .logreg #logout {
-  background-color: green;
+main .banner {
+  background: #00d2ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#928DAB), to(#00d2ff));
+  background-image: linear-gradient(to right, #928DAB, #00d2ff);
+  background-color: black;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 5px;
 }
 
-main .banner .content {
-  background: black;
-  /* Fallback color */
-  background: rgba(0, 0, 0, 0.5);
-  /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
+main .container {
+  margin-left: 400px;
+}
+
+.form {
+  color: white;
   padding: 20px;
+  margin: 50px;
+  width: 500px;
+  background-color: #5076bd;
 }
 
-#user_image {
-  max-width: 100%;
-  max-height: 100%;
-  height: 25px;
-  width: 25px;
+.form form p {
+  font-size: 15px;
+  margin: 0px;
 }
 
-.email {
+.form form .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  margin-bottom: 10px;
 }
 
-.info_banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.form form .name .firstname {
+  margin-right: 21px;
+}
+
+.form form .email_box,
+.form form .phone_box,
+.form form .password_box,
+.form form .confpassword_box,
+.form form .checkterms {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.form form .input_icons {
+  padding: 5px 4px;
+  margin-right: -3px;
+  margin-top: 2px;
+  color: yellow;
+  display: none;
+}
+
+.form form label {
+  margin-left: -29px;
+  padding-left: 4px;
+  border-left: 2px solid #f1b3b3;
+}
+
+.form form .eye_con {
+  color: black;
+}
+
+.form form #eye_con1,
+.form form #eye_con2 {
+  display: none;
+}
+
+.form form input {
+  border: 1px solid rgba(211, 189, 189, 0.89);
+  padding-left: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: rgba(250, 149, 149, 0.315);
+}
+
+.form form .input_field {
+  display: inline-block;
+  width: 85%;
+}
+
+.sub {
+  margin-top: 40px;
+}
+
+#submit_btn {
+  text-align: center;
+  background-color: yellow;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(226, 214, 214, 0.185);
+  color: black;
+}
+
+#login_btn {
+  text-align: center;
+  background-color: yellow;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(226, 214, 214, 0.185);
+  color: black;
+}
+
+#submit_btn:hover {
+  -webkit-box-shadow: 0 0 15px 1px;
+          box-shadow: 0 0 15px 1px;
+}
+
+#submit_btn:disabled {
+  -webkit-box-shadow: 0 0 15px 1px;
+          box-shadow: 0 0 15px 1px;
 }
