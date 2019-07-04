@@ -14,20 +14,54 @@ function decrypt(message = '', key = '') {
     return decryptedMessage;
 }
 login.addEventListener('click', () => {
-    let len = localStorage.length;
-    for (i = 1; i < len; i++) {
+    let len = localObjLength();
+    for (i = 0; i <= len; i++) {
         let user = localStorage.getItem('data' + i);
         let userdata = JSON.parse(user);
         if (email.value == userdata.email) {
             let localpass = decrypt(userdata.password);
             if (pass.value == localpass) {
-                let loggedperson = userdata.name;
+                let loggedperson = userdata.email;
                 localStorage.setItem('current_user', loggedperson);
                 document.location = './home.html';
             }
         }
+        console.log('data' + i);
     }
 });
 register.addEventListener('click', () => {
     document.location = './register.html';
 });
+let view = document.getElementById('eye_con1');
+view.addEventListener('click', () => {
+    console.log(password.type);
+    let toggler = document.getElementById('icon1');
+    if (password.type == 'password') {
+        password.type = 'text';
+
+        toggler.classList.toggle('icons-eye');
+    } else {
+        password.type = 'password';
+        toggler.classList.toggle('icons-eye');
+    }
+});
+
+function localObjLength() {
+    let len = localStorage.length;
+    let counter = 0;
+    if (len != 0) {
+        let re = /^data[0-9]*$/;
+        for (i = 1; i <= len; i++) {
+            let userkey = localStorage.key(i);
+            if (re.test(userkey)) {
+                counter = counter + 1;
+                console.log('match found');
+            } else {
+                console.log('notmatched');
+            }
+        }
+    }
+    return counter;
+}
+let x = localObjLength();
+console.log(x);

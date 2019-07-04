@@ -289,7 +289,7 @@ function localObjLength() {
     let counter = 0;
     if (len != 0) {
         let re = /^data[0-9]*$/;
-        for (i = 1; i <= len; i++) {
+        for (i = 0; i <= len; i++) {
             let userkey = localStorage.key(i);
             if (re.test(userkey)) {
                 counter = counter + 1;
