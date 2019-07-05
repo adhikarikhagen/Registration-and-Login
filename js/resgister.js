@@ -301,5 +301,3 @@ function localObjLength() {
     }
     return counter;
 }
-let x = localObjLength();
-console.log(x);

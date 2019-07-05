@@ -15,18 +15,22 @@ function decrypt(message = '', key = '') {
 }
 login.addEventListener('click', () => {
     let len = localObjLength();
-    for (i = 0; i <= len; i++) {
+    for (i = 0; i < len; i++) {
         let user = localStorage.getItem('data' + i);
         let userdata = JSON.parse(user);
         if (email.value == userdata.email) {
+            console.log('email match');
             let localpass = decrypt(userdata.password);
             if (pass.value == localpass) {
-                let loggedperson = userdata.email;
-                localStorage.setItem('current_user', loggedperson);
+                console.log('password match');
+                let value = i;
+                localStorage.setItem('current_user', value);
                 document.location = './home.html';
             }
+        } else {
+            console.log('data' + i);
+            console.log('password no match');
         }
-        console.log('data' + i);
     }
 });
 register.addEventListener('click', () => {
@@ -51,7 +55,7 @@ function localObjLength() {
     let counter = 0;
     if (len != 0) {
         let re = /^data[0-9]*$/;
-        for (i = 1; i <= len; i++) {
+        for (i = 0; i <= len; i++) {
             let userkey = localStorage.key(i);
             if (re.test(userkey)) {
                 counter = counter + 1;
@@ -63,5 +67,3 @@ function localObjLength() {
     }
     return counter;
 }
-let x = localObjLength();
-console.log(x);
