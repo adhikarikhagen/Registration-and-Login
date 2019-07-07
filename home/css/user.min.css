@@ -444,101 +444,221 @@ textarea {
   padding: 0.2em 0;
 }
 
-#wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
 .container {
+  display: table;
   width: 100%;
   margin: 0 auto;
 }
 
-.top-bg {
+body {
+  font-family: 'Roboto';
+  font-size: 22px;
+}
+
+.wrapper {
+  overflow: hidden;
+  background-color: black;
+  padding-bottom: 180px;
+}
+
+header .top-bg {
   padding-top: 10px;
   -webkit-box-shadow: 0 0 5px 1px;
           box-shadow: 0 0 5px 1px;
 }
 
-.nav {
+header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.nav ul li {
+header .nav ul li {
   display: inline-block;
   margin-left: 15px;
 }
 
-.nav ul li a {
+header .nav ul li a {
   color: black;
   font-size: 16px;
   font-weight: 500;
 }
 
-.nav ul li a:hover {
+header .nav ul li a:hover {
   text-decoration: none;
   padding-bottom: 10px;
   color: blue;
 }
 
-.nav ul li a:active {
+header .nav ul li a:active {
   text-decoration: underline;
   color: blue;
 }
 
-.nav .logreg {
+header .nav .logreg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-left: 100px;
 }
 
-.nav .logreg .register {
+header .nav .logreg .register {
   margin-left: auto;
 }
 
-.nav .logreg button {
+header .nav .logreg button {
+  outline: none;
+  background-color: white;
   border: none;
-  color: white;
-  background-color: #d42929;
 }
 
-.nav .logreg #logout {
-  background-color: green;
-}
-
-main {
-  background-image: url("../images/wall-wallpapers-25346-616321.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
-  background-blend-mode: lighten;
-  opacity: 0.9;
-}
-
-main .banner .content {
-  color: #ec9188;
-  width: 100%;
-  padding: 150px 10px;
-  text-align: center;
-}
-
-#user_image {
+header #user_image {
   max-width: 100%;
   max-height: 100%;
   height: 25px;
   width: 25px;
 }
 
-.email {
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #984caf;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.main .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main .row h1,
+.main .row h2 {
+  text-align: center;
+  padding: 20px;
+  color: wheat;
+}
+
+.main .row form {
+  font-family: 'Roboto';
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .row form button {
+  outline: none;
+  position: relative;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  right: 65px;
+  border: 1px solid #00a191;
+  background-color: #230136;
+  color: white;
+  font-size: 40px;
+  padding: 0 20px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.main input {
+  color: black;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  border: 2px solid #00a191;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.main ul {
+  list-style: none;
+}
+
+.main ul li {
+  font-family: 'Roboto';
+  font-size: 20px;
+  background-color: #fff;
+  border: 2px solid #00a191;
+  margin: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1px;
+  color: #0a0a0a;
+}
+
+.main ul li:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px 1px;
+          box-shadow: 0 0 10px 1px;
+}
+
+.main ul li:nth-child(even) {
+  background-color: rgba(49, 51, 51, 0.643);
+  color: white;
+  opacity: 1;
+}
+
+.main ul li .edit_delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  border-left: 1px solid white;
+}
+
+.main ul li .edit_delete button {
+  border-radius: 0px;
+  color: white;
+  background-color: #0a010a;
+  font-size: 15px;
+}
+
+.main .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 150px;
+  border-radius: 5px;
+  padding-bottom: 100px;
+  background-color: #aacefd;
+}
+
+.main .card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

@@ -4,13 +4,25 @@ let out = document.getElementById('logout');
 let loggedPerson = localStorage.getItem('current_user');
 let userObj = localStorage.getItem('data' + loggedPerson);
 let userInfo = JSON.parse(userObj);
+localpass = decrypt(userInfo.password);
+//AES
 
 //Logout
 out.addEventListener('click', () => {
     localStorage.removeItem('current_user');
     document.location = './index.html';
 });
-
+//AES Encryption
+function encrypt(message = '', key = '') {
+    var message = CryptoJS.AES.encrypt(message, key);
+    return message.toString();
+}
+//AES Decryption
+function decrypt(message = '', key = '') {
+    var code = CryptoJS.AES.decrypt(message, key);
+    var decryptedMessage = code.toString(CryptoJS.enc.Utf8);
+    return decryptedMessage;
+}
 //Creating list element for Name
 let li = document.createElement('li');
 li.innerHTML = `  ${
@@ -51,7 +63,7 @@ document.getElementById('enter_name_btn').addEventListener('click', () => {
         lastname: userInfo.lastname,
         email: userInfo.email,
         phone: userInfo.phone,
-        password: userInfo.password,
+        password: localpass,
     };
     let obj = JSON.stringify(object1);
     localStorage.setItem('data' + loggedPerson, obj);
@@ -98,7 +110,7 @@ document.getElementById('enter_lastname_btn').addEventListener('click', () => {
         lastname: document.getElementById('input_lastname').value,
         email: userInfo.email,
         phone: userInfo.phone,
-        password: userInfo.password,
+        password: localpass,
     };
     let obj = JSON.stringify(object1);
     localStorage.setItem('data' + loggedPerson, obj);
@@ -145,7 +157,7 @@ document.getElementById('enter_phone_btn').addEventListener('click', () => {
         lastname: userInfo.lastname,
         email: userInfo.email,
         phone: document.getElementById('input_phone').value,
-        password: userInfo.password,
+        password: localpass,
     };
     let obj = JSON.stringify(object1);
     localStorage.setItem('data' + loggedPerson, obj);
@@ -190,9 +202,9 @@ document.getElementById('enter_email_btn').addEventListener('click', () => {
     let object1 = {
         name: userInfo.name,
         lastname: userInfo.lastname,
-        email: userInfo.email,
+        email: document.getElementById('input_email').value,
         phone: userInfo.phone,
-        password: document.getElementById('input_email').value,
+        password: localpass,
     };
     let obj = JSON.stringify(object1);
     localStorage.setItem('data' + loggedPerson, obj);
@@ -239,7 +251,6 @@ function removeLocalObj(x) {
 
             localStorage.setItem(JSON.stringify('data' + i), x);
         }
-
         localStorage.removeItem('data' + len1);
     }
 }

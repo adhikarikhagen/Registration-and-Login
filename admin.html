@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./css/home.min.css" />
+        <link rel="stylesheet" href="./css/admin.min.css" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
         <!-- jQuery library -->
@@ -13,10 +13,12 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <title>HomePage</title>
+
+
     </head>
 
     <body>
-        <div id="wrapper">
+        <div class="wrapper">
             <header>
                 <div class="top-bg">
                     <div class="container">
@@ -44,11 +46,10 @@
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <button id="logout">Logout</button>
                                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal1">
-                                                Remove Account
-                                            </button>
+                                      Remove Account
+                                   </button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -58,51 +59,62 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
-                                            &times;
-                                        </button>
+                                &times;
+                             </button>
                                 <h4 class="modal-title">Are you sure</h4>
                             </div>
                             <div class="modal-body">
                                 <button id="remove">YES</button>
                                 <button data-dismiss="modal">
-                                            Cancel
-                                        </button>
+                                Cancel
+                             </button>
                             </div>
                             <div class="modal-footer"></div>
                         </div>
                     </div>
                 </div>
             </header>
+
             <main>
-                <div class="info_banner">
-                    <div class=" container your_info">
-                        <h1>YOUR INFO:</h1>
+                <div class="sidebar">
+                    <a href="./admin.html">HOME</a>
+                    <a href="#news">News</a>
+                    <a href="./home/user.html">USERS</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
 
-                        <div class="row">
-                            <div class="email">
-                                <p class="">First Name:</p>
-                                <ul class="" id="fname"></ul>
-                            </div>
-                            <div class="email ">
-                                <p class="">Last Name:</p>
-                                <ul class="" id="lname"></ul>
-                            </div>
-                            <div class="email ">
-                                <p class="">Phone:</p>
-                                <ul class="" id="phone"></ul>
-                            </div>
+                <div class="content">
+                    <div class="info_banner">
+                        <div class=" container your_info">
+                            <h1>YOUR INFO:</h1>
 
-                            <div class="email ">
-                                <p class="">Email:</p>
-                                <ul class="" id="email"></ul>
+                            <div class="row">
+                                <div class="email">
+                                    <p class="">First Name:</p>
+                                    <ul class="" id="fname"></ul>
+                                </div>
+                                <div class="email ">
+                                    <p class="">Last Name:</p>
+                                    <ul class="" id="lname"></ul>
+                                </div>
+                                <div class="email ">
+                                    <p class="">Phone:</p>
+                                    <ul class="" id="phone"></ul>
+                                </div>
+
+                                <div class="email ">
+                                    <p class="">Email:</p>
+                                    <ul class="" id="email"></ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
-            <foooter></foooter>
         </div>
-        <script src="./js/home.js"></script>
+        <script src="./js/encryptor.js"></script>
+        <script src="./js/admin.js"></script>
     </body>
 
 </html>

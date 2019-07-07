@@ -17,7 +17,8 @@
 
 .top-bg {
      padding-top: 10px;
-     background-color: rgb(206, 221, 223);
+     box-shadow: 0 0 15px 10px;
+     margin-bottom: 1px;
 }
 
 .nav {
@@ -45,20 +46,29 @@
           padding-left: 100px;
           .register {
                margin-left: auto;
+               button {
+                    padding: 0 15px;
+                    border: none;
+                    color: white;
+                    background-color: rgb(212, 41, 41);
+               }
           }
-          button {
-               padding: 0 15px;
-               border: none;
-               color: white;
-               background-color: rgb(212, 41, 41);
+          .login {
+               margin-left: auto;
+               button {
+                    padding: 0 15px;
+                    border: none;
+                    color: white;
+                    background-color: rgb(212, 41, 41);
+               }
           }
      }
 }
 
 main {
      .banner {
-          background-color: #fff;
-          padding: 5px;
+          background: linear-gradient(to right, #485563, #29323c);
+          height: 600px;
      }
      .container {
           margin-left: 400px;
@@ -66,11 +76,14 @@ main {
 }
 
 .form {
+     box-shadow: 0 0 10px 1px;
+     margin-bottom: 20px;
      color: black;
      padding: 20px;
      margin: 50px;
      width: 500px;
      background-color: rgb(241, 240, 240);
+     border-radius: 4px;
      form {
           padding-left: 20px;
           p {
@@ -101,21 +114,6 @@ main {
                color: yellow;
                display: none;
           }
-          // .icon_position {
-          //      position: relative;
-          //      .input_icons {
-          //           border-right: 1px solid rgb(138, 119, 119);
-          //           position: absolute;
-          //           left: 10px;
-          //           top: 30px;
-          //           padding-right: 05px;
-          //           opacity: 0.6;
-          //      }
-          //      .eye_con {
-          //           position: absolute;
-          //           color: black;
-          //      }
-          // }
           label {
                margin-left: -29px;
                padding-left: 4px;
@@ -147,18 +145,19 @@ main {
 
 #submit_btn {
      text-align: center;
-     background-color: yellow;
+     background-color: rgb(212, 41, 41);
      padding: 10px 15px;
      border-bottom: 1px solid rgba(226, 214, 214, 0.185);
      color: black;
+     box-shadow: 0px 0px 10px 1px
 }
 
 #login_btn {
-     text-align: center;
-     background-color: yellow;
-     padding: 5px 10px;
-     border-bottom: 1px solid rgba(226, 214, 214, 0.185);
-     color: black;
+     border: none;
+     color: white;
+     outline: none;
+     padding: 5px 15px;
+     background-color: rgb(212, 41, 41);
 }
 
 #submit_btn:hover {

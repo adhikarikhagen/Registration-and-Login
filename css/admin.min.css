@@ -501,30 +501,9 @@ textarea {
 }
 
 .nav .logreg button {
+  outline: none;
+  background-color: white;
   border: none;
-  color: white;
-  background-color: #d42929;
-}
-
-.nav .logreg #logout {
-  background-color: green;
-}
-
-main {
-  background-image: url("../images/wall-wallpapers-25346-616321.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
-  background-blend-mode: lighten;
-  opacity: 0.9;
-}
-
-main .banner .content {
-  color: #ec9188;
-  width: 100%;
-  padding: 150px 10px;
-  text-align: center;
 }
 
 #user_image {
@@ -534,11 +513,78 @@ main .banner .content {
   width: 25px;
 }
 
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #984caf;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+main .info_banner .your_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .info_banner .your_info .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .email {
+  margin: 0px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.email p {
+  margin-right: 10px;
+}
+
+.email li {
+  text-align: center;
+}
+
+.email li .edit_btn {
+  margin-left: 10px;
+}
+
+.user-info .row {
+  visibility: none;
 }

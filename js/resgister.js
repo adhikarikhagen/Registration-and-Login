@@ -258,6 +258,8 @@ submit.addEventListener('click', () => {
             email: email.value,
             phone: phone.value,
             password: pass,
+            role: 'user',
+            status: 'not approved',
         };
 
         localStorage.setItem('data' + len, JSON.stringify(objuser));

@@ -599,7 +599,9 @@ i {
 
 .top-bg {
   padding-top: 10px;
-  background-color: #cedddf;
+  -webkit-box-shadow: 0 0 15px 10px;
+          box-shadow: 0 0 15px 10px;
+  margin-bottom: 1px;
 }
 
 .nav {
@@ -639,7 +641,18 @@ i {
   margin-left: auto;
 }
 
-.nav .logreg button {
+.nav .logreg .register button {
+  padding: 0 15px;
+  border: none;
+  color: white;
+  background-color: #d42929;
+}
+
+.nav .logreg .login {
+  margin-left: auto;
+}
+
+.nav .logreg .login button {
   padding: 0 15px;
   border: none;
   color: white;
@@ -647,8 +660,9 @@ i {
 }
 
 main .banner {
-  background-color: #fff;
-  padding: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background: linear-gradient(to right, #485563, #29323c);
+  height: 600px;
 }
 
 main .container {
@@ -656,11 +670,15 @@ main .container {
 }
 
 .form {
+  -webkit-box-shadow: 0 0 10px 1px;
+          box-shadow: 0 0 10px 1px;
+  margin-bottom: 20px;
   color: black;
   padding: 20px;
   margin: 50px;
   width: 500px;
   background-color: #f1f0f0;
+  border-radius: 4px;
 }
 
 .form form {
@@ -738,18 +756,20 @@ main .container {
 
 #submit_btn {
   text-align: center;
-  background-color: yellow;
+  background-color: #d42929;
   padding: 10px 15px;
   border-bottom: 1px solid rgba(226, 214, 214, 0.185);
   color: black;
+  -webkit-box-shadow: 0px 0px 10px 1px;
+          box-shadow: 0px 0px 10px 1px;
 }
 
 #login_btn {
-  text-align: center;
-  background-color: yellow;
-  padding: 5px 10px;
-  border-bottom: 1px solid rgba(226, 214, 214, 0.185);
-  color: black;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5px 15px;
+  background-color: #d42929;
 }
 
 #submit_btn:hover {

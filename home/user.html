@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/user.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="top-bg">
+                <div class="container">
+                    <div class="nav row ">
+                        <div class="logo col-md-3">
+                            <p>LOGO</p>
+                        </div>
+                        <div class="col-md-6 nav-bar">
+                            <ul>
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">SERVICES</a></li>
+                                <li><a href="">PRODUCTS</a></li>
+                                <li><a href="">CONTACT</a></li>
+                                <li><a href="">ABOUT US</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 logreg">
+                            <div class="register pr-2">
+                                <p id="user"></p>
+                            </div>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../images/default-user-image.png" alt="" id="user_image" />
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <button id="logout">Logout</button>
+                                    <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal1">
+                                  Remove Account
+                               </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade " id="myModal1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                         </button>
+                            <h4 class="modal-title">Are you sure</h4>
+                        </div>
+                        <div class="modal-body">
+                            <button id="remove">YES</button>
+                            <button data-dismiss="modal">
+                            Cancel
+                         </button>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="sidebar">
+                <a href="../admin.html">USERS</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <div class='content'>
+                <div class="row">
+                    <!-- <h1>US ACCOUNTS</h1>
+                    <form action="#">
+                        <input type="text" name="item" id="task" placeholder="Enter new task here" />
+                        <button id='add_btn' class='add'>+</button>
+                    </form> -->
+
+                    <div>
+                        <h2>USERS</h2>
+                        <ul id="ulist"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src='../js/encryptor.js'></script>
+        <script src="./js/user.js"></script>
+
+        </script>
+        </script>
+    </body>
+
+</html>

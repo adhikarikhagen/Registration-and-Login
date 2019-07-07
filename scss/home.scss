@@ -13,6 +13,12 @@
 .top-bg {
      padding-top: 10px;
      box-shadow: 0 0 5px 1px;
+     margin-bottom: 1px;
+}
+
+h1 {
+     font-size: 40px;
+     font-weight: 900;
 }
 
 .nav {
@@ -44,33 +50,35 @@
                margin-left: auto;
           }
           button {
+               outline: none;
+               background-color: white;
                border: none;
-               color: white;
-               background-color: rgb(212, 41, 41);
-          }
-          #logout {
-               background-color: green;
           }
      }
 }
 
+
+
 main {
-     background-image: url('../images/wall-wallpapers-25346-616321.jpg');
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 600px;
-     background-blend-mode: lighten;
-     opacity: 0.9;
-     .banner {
-          .content {
-               color: #ec9188;
-               width: 100%;
-               padding: 150px 10px;
+     padding-top: 40px;
+     .info_banner {
+          .your_info {
+               width: 50%;
+               box-shadow: 10px 20px 10px grey;
+               // margin: 2px;
+               border: 1px solid grey;
                text-align: center;
+               display: flex;
+               flex-direction: column;
+               .row {
+                    display: flex;
+                    flex-direction: column;
+               }
           }
      }
 }
+
+
 
 #user_image {
      max-width: 100%;
@@ -80,6 +88,16 @@ main {
 }
 
 .email {
+     margin: 0px 100px;
      display: flex;
      align-items: center;
+     p {
+          margin-right: 10px;
+     }
+     li {
+          text-align: center;
+          .edit_btn {
+               margin-left: 30px;
+          }
+     }
 }

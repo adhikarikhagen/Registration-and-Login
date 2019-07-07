@@ -44,30 +44,9 @@
                margin-left: auto;
           }
           button {
+               outline: none;
+               background-color: white;
                border: none;
-               color: white;
-               background-color: rgb(212, 41, 41);
-          }
-          #logout {
-               background-color: green;
-          }
-     }
-}
-
-main {
-     background-image: url('../images/wall-wallpapers-25346-616321.jpg');
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 600px;
-     background-blend-mode: lighten;
-     opacity: 0.9;
-     .banner {
-          .content {
-               color: #ec9188;
-               width: 100%;
-               padding: 150px 10px;
-               text-align: center;
           }
      }
 }
@@ -79,7 +58,65 @@ main {
      width: 25px;
 }
 
+.sidebar {
+     margin: 0;
+     padding: 0;
+     width: 200px;
+     background-color: #f1f1f1;
+     position: fixed;
+     height: 100%;
+     overflow: auto;
+}
+
+.sidebar a {
+     display: block;
+     color: black;
+     padding: 16px;
+     text-decoration: none;
+}
+
+.sidebar a.active {
+     background-color: #984caf;
+     color: white;
+}
+
+.sidebar a:hover:not(.active) {
+     background-color: #555;
+     color: white;
+}
+
+main {
+     .info_banner {
+          .your_info {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               .row {
+                    display: flex;
+                    flex-direction: column;
+               }
+          }
+     }
+}
+
 .email {
+     margin: 0px 100px;
      display: flex;
      align-items: center;
+     p {
+          margin-right: 10px;
+     }
+     //  justify-content: space-between;
+     li {
+          text-align: center;
+          .edit_btn {
+               margin-left: 10px;
+          }
+     }
+}
+
+.user-info {
+     .row {
+          visibility: none;
+     }
 }
